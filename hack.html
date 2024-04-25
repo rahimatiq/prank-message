@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Message</title>
+</head>
+<body>
+    <h1>Welcome to the Prank Message!</h1>
+    <p>Click <a href="#" id="prankLink">here</a> to see a friendly message multiple times!</p>
+
+    <script>
+        // Function to send a message to your PC multiple times
+        function sendMultiplePrankMessagesToPC() {
+            // Define the number of times to show the popup
+            var numberOfPopups = 20; // Change this to the desired number of popups
+
+            // Loop to show the popup multiple times
+            for (var i = 0; i < numberOfPopups; i++) {
+                setTimeout(function() {
+                    // Replace this with any action you want to trigger on your PC
+                    // For demonstration, let's just display a friendly message
+                    alert("Hello bro! How's the prank going?");
+                }, i * 1000); // Adjust the delay between popups (in milliseconds) if needed
+            }
+        }
+
+        // Attach click event listener to the prank link
+        document.getElementById("prankLink").addEventListener("click", function(event) {
+            // Prevent the default action of the link
+            event.preventDefault();
+            // Call the function to send friendly message to PC multiple times
+            sendMultiplePrankMessagesToPC();
+        });
+    </script>
+</body>
+</html>
